@@ -5,8 +5,8 @@ import com.tech.freak.wizardpager.ui.ImageFragment;
 
 public class ImagePage extends TextPage {
 
-	public ImagePage(ModelCallbacks callbacks, String title) {
-		super(callbacks, title);
+	public ImagePage(ModelCallbacks callbacks,String key, String title) {
+		super(callbacks, key, title);
 	}
 
 	@Override

@@ -8,8 +8,8 @@ import com.tech.freak.wizardpager.ui.TextFragment;
 
 public class TextPage extends Page {
 
-	public TextPage(ModelCallbacks callbacks, String title) {
-		super(callbacks, title);
+	public TextPage(ModelCallbacks callbacks,String key, String title) {
+		super(callbacks, key, title);
 	}
 
 	@Override

@@ -18,13 +18,8 @@ package com.example.android.wizardpager;
 
 import android.content.Context;
 
-import com.example.android.wizardpager.pages.CustomerInfoPage;
 import com.tech.freak.wizardpager.model.AbstractWizardModel;
-import com.tech.freak.wizardpager.model.BranchPage;
-import com.tech.freak.wizardpager.model.MultipleFixedChoicePage;
-import com.tech.freak.wizardpager.model.NumberPage;
 import com.tech.freak.wizardpager.model.PageList;
-import com.tech.freak.wizardpager.model.SingleFixedChoicePage;
 import com.tech.freak.wizardpager.model.TextPage;
 
 public class SandwichWizardModel extends AbstractWizardModel {
@@ -34,46 +29,29 @@ public class SandwichWizardModel extends AbstractWizardModel {
 
     @Override
     protected PageList onNewRootPageList() {
-        return new PageList(new BranchPage(this, "Order type").addBranch(
-                "Sandwich",
-                new SingleFixedChoicePage(this, "Bread").setChoices("White",
-                        "Wheat", "Rye", "Pretzel", "Ciabatta")
-                        .setRequired(true),
-
-                new MultipleFixedChoicePage(this, "Meats").setChoices(
-                        "Pepperoni", "Turkey", "Ham", "Pastrami", "Roast Beef",
-                        "Bologna"),
-
-                new MultipleFixedChoicePage(this, "Veggies").setChoices(
-                        "Tomatoes", "Lettuce", "Onions", "Pickles",
-                        "Cucumbers", "Peppers"),
-
-                new MultipleFixedChoicePage(this, "Cheeses").setChoices(
-                        "Swiss", "American", "Pepperjack", "Muenster",
-                        "Provolone", "White American", "Cheddar", "Bleu"),
-
-                new BranchPage(this, "Toasted?")
-                        .addBranch(
-                                "Yes",
-                                new SingleFixedChoicePage(this, "Toast time")
-                                        .setChoices("30 seconds", "1 minute",
-                                                "2 minutes")).addBranch("No")
-                        .setValue("No"))
-
-                .addBranch(
-                        "Salad",
-                        new SingleFixedChoicePage(this, "Salad type").setChoices(
-                                "Greek", "Caesar").setRequired(true),
-
-                        new SingleFixedChoicePage(this, "Dressing").setChoices(
-                                "No dressing", "Balsamic", "Oil & vinegar",
-                                "Thousand Island", "Italian").setValue("No dressing"),
-                        new NumberPage(this, "How Many Salads?").setRequired(true))
-                .setRequired(true),
-                new TextPage(this, "Comments").setRequired(true)
-
-                        .setRequired(true),
-
-                new CustomerInfoPage(this, "Your info").setRequired(true));
+//        Page thankYouPage = new TextPage(this, "Thank you!");
+        return new PageList(new TextPage(this, "Welcome", "Welcome"));
+//                ,new BranchPage(this,"Type", "Digital Tracking Type")
+//                .addBranch("Vpn Only",
+//                    new BranchPage(this, "install_vpn", "This app will install a VPN on your device, do you agree")
+//                            .addBranch("Yes",
+//                                    new SingleFixedChoicePage(this, "").setChoices("Yes",
+//                                        "No").setValue("Yes")
+//                                        .setRequired(true))
+//                            .addBranch("No", thankYouPage)
+//                .addBranch("Certificate + VPN",
+//                    new SingleFixedChoicePage(this, "Salad type").setChoices(
+//                            "Greek", "Caesar").setRequired(true),
+//
+//                    new SingleFixedChoicePage(this, "Dressing").setChoices(
+//                            "No dressing", "Balsamic", "Oil & vinegar",
+//                            "Thousand Island", "Italian").setValue("No dressing"),
+//                    new NumberPage(this, "How Many Salads?").setRequired(true))
+//                .setRequired(true),
+//                new TextPage(this, "Comments").setRequired(true)
+//
+//                        .setRequired(true),
+//
+//                new CustomerInfoPage(this, "Your info").setRequired(true)));
     }
 }

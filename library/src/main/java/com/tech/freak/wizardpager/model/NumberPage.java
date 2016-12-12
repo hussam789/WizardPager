@@ -5,8 +5,8 @@ import com.tech.freak.wizardpager.ui.NumberFragment;
 
 public class NumberPage extends TextPage {
 
-	public NumberPage(ModelCallbacks callbacks, String title) {
-		super(callbacks, title);
+	public NumberPage(ModelCallbacks callbacks,String key, String title) {
+		super(callbacks, key, title);
 	}
 
 	@Override

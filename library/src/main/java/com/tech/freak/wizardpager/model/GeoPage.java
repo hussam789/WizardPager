@@ -5,8 +5,8 @@ import com.tech.freak.wizardpager.ui.GeoFragment;
 
 public class GeoPage extends TextPage {
 
-	public GeoPage(ModelCallbacks callbacks, String title) {
-		super(callbacks, title);
+	public GeoPage(ModelCallbacks callbacks,String key, String title) {
+		super(callbacks, key, title);
 	}
 
 	@Override

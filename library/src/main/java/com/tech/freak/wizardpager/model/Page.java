@@ -39,10 +39,12 @@ public abstract class Page implements PageTreeNode {
     protected String mTitle;
     protected boolean mRequired = false;
     protected String mParentKey;
+    protected String mKey;
 
-    protected Page(ModelCallbacks callbacks, String title) {
+    protected Page(ModelCallbacks callbacks, String key, String title) {
         mCallbacks = callbacks;
         mTitle = title;
+        mKey = key;
     }
 
     public Bundle getData() {
